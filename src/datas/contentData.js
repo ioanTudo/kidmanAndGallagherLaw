@@ -1,3 +1,6 @@
+import heroBanner1 from "../images/bannersHero/craigandbarb1.jpg";
+import heroBanner2 from "../images/bannersHero/about-banner.jpg";
+
 export const NavData = [
   {
     id: 0,
@@ -34,5 +37,24 @@ export const NavData = [
     id: 6,
     content: "contact",
     path: "/contact",
+  },
+];
+
+export const HeroImgData = [
+  {
+    id: 0,
+    imgSrc: heroBanner1,
+    header: "reno's top law firm for personal injuries ",
+    subHeader: "pay nothing unless you win, let us fight for you",
+    beforeDesign: true,
+    displayBtn: true,
+  },
+  {
+    id: 1,
+    imgSrc: heroBanner2,
+    header: "reno's top law firm for personal injuries ",
+    subHeader: "pay nothing unless you win, let us fight for you",
+    beforeDesign: false,
+    displayBtn: false,
   },
 ];
