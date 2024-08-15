@@ -4,7 +4,7 @@
   cursor: pointer;
 }
 .withoutBefore {
-  text-transform: capitalize;
+  text-transform: uppercase;
   color: white;
 }
 
