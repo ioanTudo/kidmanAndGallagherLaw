@@ -2,6 +2,8 @@ import heroBanner1 from "../images/bannersHero/craigandbarb1.jpg";
 import heroBanner2 from "../images/bannersHero/about-banner.jpg";
 import caseLogo1 from "../images/incons/truckIcon.png";
 import caseLogo2 from "../images/incons/workerIcon.png";
+import trustLogo1 from "../images/incons/bestAttorneyTrustIcon.png";
+import trustLogo2 from "../images/incons/multiMillionTrustIcon.png";
 
 export const NavData = [
   {
@@ -85,5 +87,43 @@ export const CasesContainerData = [
     caseReason: "truck accident",
     amountWon: "$1.15",
     caseLogo: caseLogo2,
+  },
+];
+
+export const TrustIconsContainerData = [
+  {
+    id: 0,
+    trustLogo: trustLogo1,
+    altText: "best attorney award logo",
+  },
+  {
+    id: 1,
+    trustLogo: trustLogo2,
+    altText: "best attorney award logo",
+  },
+  {
+    id: 2,
+    trustLogo: trustLogo1,
+  },
+  {
+    id: 3,
+    trustLogo: trustLogo1,
+  },
+  {
+    id: 4,
+    trustLogo: trustLogo1,
+  },
+];
+
+export const ClaimsContainerData = [
+  {
+    id: 0,
+    header: "trusted prsonal injury lawyer near reno, nevada",
+    content: "",
+  },
+  {
+    id: 1,
+    header: "trusted prsonal injury lawyer near reno, nevada",
+    content: "",
   },
 ];

@@ -1,0 +1,58 @@
+@media (min-width: 375px) {
+  .flexWrapper {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    justify-content: center;
+  }
+
+  .logoContainer:first-child::before {
+    position: absolute;
+    content: "";
+    background-image: url(../../../images//incons/leftDesignTrust.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    left: -50%;
+    width: 50px;
+    height: 110px;
+  }
+
+  .logoContainer:last-child::after {
+    position: absolute;
+    content: "";
+    background-image: url(../../../images/incons/rightDesignTrust.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    right: -50%;
+    width: 50px;
+    height: 110px;
+  }
+  .logoContainer:last-child {
+    margin: auto 0 auto 0;
+  }
+  .logoContainer:first-child {
+    margin: auto 0 auto 0;
+  }
+  .logoContainer:nth-child(2) {
+    margin: auto 0 auto 0;
+  }
+
+  .logoContainer img {
+    width: 80px;
+    height: 80px;
+  }
+  .logoContainer:nth-child(4) {
+    display: none;
+  }
+  .logoContainer:nth-child(3) {
+    display: none;
+  }
+  .logoContainer {
+    position: relative;
+    margin: auto;
+  }
+  .logoContainer img {
+    opacity: 0.5;
+    margin-top: 10px;
+  }
+}

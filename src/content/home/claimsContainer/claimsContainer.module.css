@@ -1,0 +1,20 @@
+.gridWrapper {
+  background-image: url(../../../images//background-images//claimBgImg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.infoContent {
+  margin: auto;
+  text-align: center;
+}
+.infoContent > p::after {
+  background: url(../../../images/incons/curlyLinesDivider.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: auto;
+  height: 10px;
+  width: 100px;
+  display: block;
+  margin-top: 20px;
+}
