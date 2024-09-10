@@ -1,15 +1,12 @@
-import { CasesContainer } from "../../content/home/casesContainer/casesContainer";
-import { TrustIconsContainer } from "../../content/home/trustIconsContainer/trustIconsContainer";
 import { TemplatePage } from "../../templates/templatePage";
-import { ClaimsContainer } from "../../content/home/claimsContainer/claimsContainer";
+import { HomePageContent } from "../../content/home/homeContent";
 
 export const HomePage = () => {
   return (
     <>
-      <TemplatePage />
-      <CasesContainer />
-      <TrustIconsContainer />
-      <ClaimsContainer />
+      <TemplatePage>
+        <HomePageContent />
+      </TemplatePage>
     </>
   );
 };

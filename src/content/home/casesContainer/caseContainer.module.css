@@ -11,25 +11,35 @@
   }
   .gridWrapper p {
     text-transform: uppercase;
+
     color: #cfb787;
+
     font-family: "Source Sans 3", sans-serif;
   }
 
   .gridWrapper h1 {
     margin-top: 0;
+
     font-family: "Tinos", serif;
+
     color: white;
+
     margin-bottom: 0;
   }
   .amountHeader::after {
     content: "";
+
     background-image: url(../../../images/incons/curlyDivider.png);
     background-size: contain;
     background-repeat: no-repeat;
+
     margin: auto;
+
     height: 10px;
     width: 100px;
+
     display: block;
+
     margin-top: 20px;
   }
   .gridWrapper h2 {
@@ -43,15 +53,21 @@
   }
   .viewResultsContainerContent {
     margin: auto;
+
     text-transform: uppercase;
+
     color: white;
+
     font-size: 13px;
   }
   .viewResultsContainerContent h2::after {
     content: "";
+
     width: 100%;
     height: 3px;
+
     background-color: #cfb787;
+
     display: block;
   }
 }

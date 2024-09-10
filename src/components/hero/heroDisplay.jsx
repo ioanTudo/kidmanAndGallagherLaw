@@ -1,40 +1,31 @@
-import style from "./hero.module.css";
-import "../../datas/contentData";
 import { useEffect, useRef } from "react";
+import style from "./hero.module.css";
 
 export const HeroDisplay = ({
   imgSrc,
-  id,
   header,
   subHeader,
   beforeDesign,
   displayBtn,
 }) => {
-  const headerRef = useRef("");
-  const btnRef = useRef("");
+  const headerRef = useRef(null);
+  const btnRef = useRef(null);
+
   useEffect(() => {
-    if (beforeDesign === true) {
+    if (beforeDesign) {
       headerRef.current.classList.add(style.heroHeading);
-    } else if (beforeDesign === false) {
+    } else {
       headerRef.current.classList.remove(style.heroHeading);
       headerRef.current.classList.add(style.withoutBefore);
     }
   }, [beforeDesign]);
 
   useEffect(() => {
-    if (displayBtn === true) {
-      btnRef.current.style.display = "display";
-    } else if (displayBtn === false) {
-      btnRef.current.style.display = "none";
-    }
+    btnRef.current.style.display = displayBtn ? "block" : "none";
   }, [displayBtn]);
 
   return (
-    <div
-      className={style.hero}
-      key={id}
-      style={{ backgroundImage: `url(${imgSrc})` }}
-    >
+    <div className={style.hero} style={{ backgroundImage: `url(${imgSrc})` }}>
       <div className={style.heroContentContainer}>
         <h1 ref={headerRef}>{header}</h1>
         <h2 className={style.heroSubHeading}>{subHeader}</h2>

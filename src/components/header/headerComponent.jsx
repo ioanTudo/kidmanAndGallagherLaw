@@ -1,18 +1,31 @@
+import { useState } from "react";
 import { NavbarComponent } from "../navBar/navBar";
 import { LogoNav } from "./logo";
 import style from "./header.module.css";
 import { BurgerMenu } from "../burgerMenu/burgerMenu";
 import { PhoneSection } from "./phone";
-import { useRef } from "react";
 
 export const HeaderComponent = ({ onPageSelect }) => {
-  const navRef = useRef(null);
+  const [isNavVisible, setIsNavVisible] = useState(false);
+
+  const toggleNav = () => {
+    setIsNavVisible((prev) => !prev);
+    document.body.style.overflow = isNavVisible ? "visible" : "hidden";
+  };
+
   return (
     <header className={style.header}>
       <LogoNav />
-      <NavbarComponent navRef={navRef} onPageSelect={onPageSelect} />
+      <NavbarComponent
+        isNavVisible={isNavVisible}
+        onPageSelect={onPageSelect}
+      />
       <PhoneSection />
-      <BurgerMenu navRef={navRef} />
+      <BurgerMenu
+        isNavVisible={isNavVisible}
+        toggleNav={toggleNav}
+        onPageSelect={onPageSelect}
+      />
     </header>
   );
 };

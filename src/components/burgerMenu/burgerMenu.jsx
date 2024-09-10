@@ -1,46 +1,18 @@
-import React, { useRef } from "react";
 import style from "../navBar/navBar.module.css";
 
-export const BurgerMenu = ({ navRef }) => {
-  const menuIconRef = useRef(null);
-  const closeIconRef = useRef(null);
-
-  const MenuClick = () => {
-    if (navRef.current && menuIconRef.current && closeIconRef.current) {
-      navRef.current.classList.add(style.navVisible);
-      menuIconRef.current.classList.add(style.menuHidden);
-      closeIconRef.current.classList.add(style.closeVisible);
-
-      menuIconRef.current.classList.remove(style.menuVisible);
-      closeIconRef.current.classList.remove(style.closeHidden);
-      navRef.current.classList.remove(style.navHidden);
-      document.body.style.overflow = "hidden";
-    }
-  };
-  const CloseClick = () => {
-    console.log("click");
-    if (navRef.current && menuIconRef.current && closeIconRef.current) {
-      navRef.current.classList.add(style.navHidden);
-      menuIconRef.current.classList.add(style.menuVisible);
-      closeIconRef.current.classList.add(style.closeHidden);
-
-      navRef.current.classList.remove(style.navVisible);
-      menuIconRef.current.classList.remove(style.menuHidden);
-      closeIconRef.current.classList.remove(style.closeVisible);
-      document.body.style.overflow = "visible";
-    }
-  };
+export const BurgerMenu = ({ isNavVisible, toggleNav }) => {
   return (
     <>
       <svg
-        className={style.menu}
+        className={`${style.menu} ${
+          isNavVisible ? style.menuHidden : style.menuVisible
+        }`}
         width="33"
         height="36"
         viewBox="0 0 21 24"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        ref={menuIconRef}
-        onClick={MenuClick}
+        onClick={toggleNav}
       >
         <path
           d="M0 4.5C0 3.67031 0.670312 3 1.5 3H19.5C20.3297 3 21 3.67031 21 4.5C21 5.32969 20.3297 6 19.5 6H1.5C0.670312 6 0 5.32969 0 4.5ZM0 12C0 11.1703 0.670312 10.5 1.5 10.5H19.5C20.3297 10.5 21 11.1703 21 12C21 12.8297 20.3297 13.5 19.5 13.5H1.5C0.670312 13.5 0 12.8297 0 12ZM21 19.5C21 20.3297 20.3297 21 19.5 21H1.5C0.670312 21 0 20.3297 0 19.5C0 18.6703 0.670312 18 1.5 18H19.5C20.3297 18 21 18.6703 21 19.5Z"
@@ -49,14 +21,15 @@ export const BurgerMenu = ({ navRef }) => {
       </svg>
 
       <svg
-        className={style.close}
+        className={`${style.close} ${
+          isNavVisible ? style.closeVisible : style.closeHidden
+        }`}
         width="33"
         height="36"
         viewBox="0 0 19 23"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        ref={closeIconRef}
-        onClick={CloseClick}
+        onClick={toggleNav}
       >
         <g clipPath="url(#clip0_2_236)">
           <path

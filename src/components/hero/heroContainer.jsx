@@ -6,15 +6,17 @@ export const HeroContainer = ({ selectedPageId }) => {
     (img) => img.id === selectedPageId
   );
 
+  if (!selectedHeroImage) {
+    return <div>Hero content not found</div>;
+  }
+
   return (
-    <>
-      <HeroDisplay
-        imgSrc={selectedHeroImage.imgSrc}
-        header={selectedHeroImage.header}
-        subHeader={selectedHeroImage.subHeader}
-        beforeDesign={selectedHeroImage.beforeDesign}
-        displayBtn={selectedHeroImage.displayBtn}
-      />
-    </>
+    <HeroDisplay
+      imgSrc={selectedHeroImage.imgSrc}
+      header={selectedHeroImage.header}
+      subHeader={selectedHeroImage.subHeader}
+      beforeDesign={selectedHeroImage.beforeDesign}
+      displayBtn={selectedHeroImage.displayBtn}
+    />
   );
 };
