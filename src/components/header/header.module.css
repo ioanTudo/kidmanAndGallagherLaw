@@ -19,10 +19,16 @@
     width: 150px;
     height: 40px;
 
-    background-image: url("../../images//logos/mobileLogoNav.png");
+    background-image: url("../../images/logos/mobileLogoNav.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+  }
+}
+@media (min-width: 768px) {
+  .logo {
+    width: 200px;
+    height: 50px;
   }
 }
 @media (min-width: 1200px) {
@@ -34,7 +40,7 @@
     width: 150px;
     height: 50px;
 
-    background-image: url("../../images//logos/KG\ Logo-01.png");
+    background-image: url("../../images/logos/KG\ Logo-01.png");
     background-size: cover;
     background-position: center;
   }

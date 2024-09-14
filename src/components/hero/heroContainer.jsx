@@ -1,22 +1,29 @@
-import { HeroImgData } from "../../datas/contentData";
+import { useEffect, useState } from "react";
 import { HeroDisplay } from "./heroDisplay";
+import { HeroImgData } from "../../datas/contentData";
 
 export const HeroContainer = ({ selectedPageId }) => {
-  const selectedHeroImage = HeroImgData.find(
-    (img) => img.id === selectedPageId
-  );
+  const [heroImage, setHeroImage] = useState(null);
 
-  if (!selectedHeroImage) {
-    return <div>Hero content not found</div>;
-  }
+  useEffect(() => {
+    console.log(`Selected page ID in HeroContainer: ${selectedPageId}`);
+    const selectedHeroImage = HeroImgData.find(
+      (img) => img.id === selectedPageId
+    );
+    console.log(`Selected Hero Image:`, selectedHeroImage);
+    setHeroImage(selectedHeroImage);
+  }, [selectedPageId]);
 
-  return (
+  return heroImage ? (
     <HeroDisplay
-      imgSrc={selectedHeroImage.imgSrc}
-      header={selectedHeroImage.header}
-      subHeader={selectedHeroImage.subHeader}
-      beforeDesign={selectedHeroImage.beforeDesign}
-      displayBtn={selectedHeroImage.displayBtn}
+      imgSrc={heroImage.imgSrc}
+      header={heroImage.header}
+      subHeader={heroImage.subHeader}
+      beforeDesign={heroImage.beforeDesign}
+      displayBtn={heroImage.displayBtn}
+      id={heroImage.id}
     />
+  ) : (
+    <p>Loading...</p>
   );
 };

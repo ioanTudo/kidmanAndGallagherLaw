@@ -75,4 +75,23 @@
   .withoutBefore::before {
     display: none;
   }
+
+  .heroHeadingSize {
+    text-transform: capitalize;
+
+    font-size: 30px;
+    font-family: Tinos, serif;
+    font-weight: 500;
+
+    margin-top: 0;
+  }
+  .displayNone {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .heroContentContainer h1 {
+    font-size: 60px;
+  }
 }

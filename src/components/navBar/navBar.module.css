@@ -1,5 +1,6 @@
 a {
   text-decoration: none;
+
   color: white;
 }
 
@@ -17,6 +18,7 @@ a {
   justify-content: center;
 
   text-transform: uppercase;
+
   font-family: "Source Sans 3", sans-serif;
   font-weight: 700;
 }
@@ -26,8 +28,10 @@ a {
 @media (min-width: 375px) {
   .nav {
     position: absolute;
+
     width: 100vw;
     height: 200vh;
+
     transition: right 0.2s linear;
 
     right: -140%;
@@ -41,7 +45,7 @@ a {
   }
   .navLi {
     font-size: 30px;
-    padding-top: 20px;
+    padding-top: 30px;
   }
 
   .menu {
@@ -52,14 +56,19 @@ a {
   .navUl {
     display: flex;
     flex-direction: column;
+
     margin-top: 40px;
+
     gap: 20px;
+
     text-align: center;
+
     margin-left: -70px;
   }
 
   .closeVisible {
     display: block;
+
     z-index: 1;
 
     cursor: pointer;
@@ -81,10 +90,18 @@ a {
 
   .menuVisible {
     display: block;
+
     cursor: pointer;
 
     width: 30px;
     height: auto;
+  }
+}
+@media (min-width: 768px) {
+  .navLi {
+    font-size: 50px;
+
+    padding-top: 50px;
   }
 }
 
@@ -94,7 +111,9 @@ a {
   }
   .nav {
     right: 0;
+
     position: relative;
+
     width: 100%;
 
     height: auto;
@@ -104,8 +123,11 @@ a {
   .navUl {
     display: flex;
     flex-direction: row;
+
     margin: auto;
+
     gap: 0px;
+
     text-align: center;
   }
 

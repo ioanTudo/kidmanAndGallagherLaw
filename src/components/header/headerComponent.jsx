@@ -21,11 +21,7 @@ export const HeaderComponent = ({ onPageSelect }) => {
         onPageSelect={onPageSelect}
       />
       <PhoneSection />
-      <BurgerMenu
-        isNavVisible={isNavVisible}
-        toggleNav={toggleNav}
-        onPageSelect={onPageSelect}
-      />
+      <BurgerMenu isNavVisible={isNavVisible} toggleNav={toggleNav} />
     </header>
   );
 };

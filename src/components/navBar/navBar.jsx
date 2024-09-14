@@ -3,6 +3,11 @@ import { NavbarComponentDisplay } from "./navBarDisplay.jsx";
 import style from "./navBar.module.css";
 
 export const NavbarComponent = ({ isNavVisible, onPageSelect }) => {
+  const handlePageSelect = (id) => {
+    console.log(`Page selected in NavbarComponent: ${id}`);
+    onPageSelect(id);
+  };
+
   return (
     <nav
       className={`${style.nav} ${
@@ -16,7 +21,7 @@ export const NavbarComponent = ({ isNavVisible, onPageSelect }) => {
             content={item.content}
             path={item.path}
             id={item.id}
-            onPageSelect={onPageSelect}
+            onPageSelect={() => handlePageSelect(item.id)}
           />
         ))}
       </ul>

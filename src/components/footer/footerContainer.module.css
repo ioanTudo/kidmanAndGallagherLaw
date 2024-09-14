@@ -15,6 +15,16 @@
 
     background-color: #073652;
   }
+  .bottomFormWithoutAfter {
+    display: flex;
+    flex-direction: column;
+
+    max-width: 90%;
+
+    margin: auto;
+
+    background-color: #073652;
+  }
   .buttonFormContainer::before {
     content: "";
 
@@ -380,5 +390,42 @@
   .copyrightContainer img {
     width: 200px;
     height: 50px;
+  }
+}
+@media (min-width: 768px) {
+  .mountainsBgImg {
+    background-size: cover;
+
+    height: 350px;
+  }
+  .bottomFormContainer::after {
+    height: 120px;
+
+    margin: auto auto -120px auto;
+  }
+  .footerLogo {
+    width: 250px;
+    height: 80px;
+  }
+
+  .phoneContactFooter a {
+    font-size: 40px;
+  }
+  .footerSocialContainer {
+    gap: 70px;
+  }
+
+  .icon {
+    width: 50px;
+    height: 50px;
+  }
+  iframe {
+    width: 80%;
+  }
+  .diretctionsTextBtnContainer h3 {
+    font-size: 25px;
+  }
+  .footerNavContentGrid {
+    font-size: 13px;
   }
 }

@@ -1,8 +1,19 @@
+import { NavData } from "../../datas/contentData";
 import style from "./footerContainer.module.css";
 
-export const BottomFormContainer = () => {
+export const BottomFormContainer = ({ isAboutPage }) => {
+  const aboutPage = NavData.find((navItem) => navItem.id === 1);
+
+  const isAboutPageActive = aboutPage ? isAboutPage : false;
+
   return (
-    <div className={style.bottomFormContainer}>
+    <div
+      className={` ${
+        isAboutPageActive
+          ? style.bottomFormWithoutAfter
+          : style.bottomFormContainer
+      }`}
+    >
       <div className={style.bottomFormTextContainer}>
         <h2>
           Fill out the form below to speak directly with an attorney to discuss
@@ -15,7 +26,7 @@ export const BottomFormContainer = () => {
         <form action="">
           <input type="text" placeholder="full name" />
           <input type="text" placeholder="phone number" />
-          <input type="text" placeholder="email adress" />
+          <input type="text" placeholder="email address" />
           <textarea name="" id="" placeholder="describe your case"></textarea>
         </form>
         <div className={style.formButtonContainer}>
