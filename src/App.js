@@ -9,7 +9,7 @@ import { ContactPage } from "./pages/contact/contact";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/kidmanAndGallagherLaw">
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
