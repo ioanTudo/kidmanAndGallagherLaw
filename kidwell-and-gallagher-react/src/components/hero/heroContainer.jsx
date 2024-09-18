@@ -7,9 +7,8 @@ export const HeroContainer = ({ selectedPageId }) => {
 
   useEffect(() => {
     console.log(`Selected page ID in HeroContainer: ${selectedPageId}`);
-    const selectedHeroImage = HeroImgData.find(
-      (img) => img.id === selectedPageId
-    );
+    const selectedHeroImage =
+      HeroImgData.find((img) => img.id === selectedPageId) || null; // fallback la null dacă nu găsește nicio imagine
     console.log(`Selected Hero Image:`, selectedHeroImage);
     setHeroImage(selectedHeroImage);
   }, [selectedPageId]);
@@ -21,8 +20,10 @@ export const HeroContainer = ({ selectedPageId }) => {
       subHeader={heroImage.subHeader}
       beforeDesign={heroImage.beforeDesign}
       displayBtn={heroImage.displayBtn}
-      id={heroImage.id}
+      isPageActive={heroImage.true}
     />
+  ) : selectedPageId ? (
+    <p>Image not found for this page</p>
   ) : (
     <p>Loading...</p>
   );

@@ -88,6 +88,9 @@
   .displayNone {
     display: none;
   }
+  .changeColorAndSize {
+    color: black;
+  }
 }
 
 @media (min-width: 768px) {

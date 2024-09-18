@@ -1,5 +1,5 @@
 import heroBanner1 from "../images/bannersHero/craigandbarb1.jpg";
-import heroBanner2 from "../images/bannersHero/about-banner.jpg";
+import templateBanner from "../images/bannersHero/template-banner.png";
 
 import caseLogo1 from "../images/incons/truckIcon.png";
 import caseLogo2 from "../images/incons/workerIcon.png";
@@ -88,7 +88,7 @@ export const HeroImgData = [
   },
   {
     id: 1,
-    imgSrc: heroBanner2,
+    imgSrc: templateBanner,
     header: "about ",
     subHeader: false,
     beforeDesign: false,
@@ -96,7 +96,7 @@ export const HeroImgData = [
   },
   {
     id: 2,
-    imgSrc: heroBanner2,
+    imgSrc: null,
     header: "attorneys ",
     subHeader: "",
     beforeDesign: false,
@@ -104,7 +104,7 @@ export const HeroImgData = [
   },
   {
     id: 3,
-    imgSrc: heroBanner2,
+    imgSrc: null,
     header: "practice areas",
     subHeader: "",
     beforeDesign: false,
@@ -112,7 +112,7 @@ export const HeroImgData = [
   },
   {
     id: 4,
-    imgSrc: heroBanner2,
+    imgSrc: null,
     header: "testimonials",
     subHeader: false,
     beforeDesign: false,
@@ -120,7 +120,7 @@ export const HeroImgData = [
   },
   {
     id: 5,
-    imgSrc: heroBanner2,
+    imgSrc: null,
     header: "community activity",
     subHeader: "pay nothing unless you win, let us fight for you",
     beforeDesign: false,
@@ -128,7 +128,7 @@ export const HeroImgData = [
   },
   {
     id: 6,
-    imgSrc: heroBanner2,
+    imgSrc: null,
     header: "contact ",
     subHeader: "pay nothing unless you win, let us fight for you",
     beforeDesign: false,

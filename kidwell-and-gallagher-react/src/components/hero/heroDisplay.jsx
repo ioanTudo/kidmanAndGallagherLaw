@@ -1,3 +1,4 @@
+import { NavData } from "../../datas/contentData";
 import style from "./hero.module.css";
 import { useEffect, useState } from "react";
 
@@ -10,6 +11,11 @@ export const HeroDisplay = ({
 }) => {
   const [headerClass, setHeaderClass] = useState("");
 
+  const changeColorAndSize = NavData.find(
+    (navItem) => navItem.id === 1 || 2 || 3 || 4 || 5 || 6
+  );
+  const isPageActive = changeColorAndSize ? style.changeColorAndSize : false;
+
   useEffect(() => {
     setHeaderClass(
       beforeDesign
@@ -20,7 +26,11 @@ export const HeroDisplay = ({
 
   return (
     <div className={style.hero} style={{ backgroundImage: `url(${imgSrc})` }}>
-      <div className={style.heroContentContainer}>
+      <div
+        className={` ${
+          isPageActive ? style.changeColorAndSize : style.heroContentContainer
+        }`}
+      >
         <h1 className={headerClass}>{header}</h1>
         <h2
           className={`${style.heroSubHeading} ${
