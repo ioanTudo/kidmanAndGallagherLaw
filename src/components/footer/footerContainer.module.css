@@ -79,6 +79,8 @@
     background-color: #073652;
 
     border: 1px solid #6a8697;
+
+    color: white;
   }
   .formContentContainer textarea {
     margin: auto;
@@ -102,6 +104,8 @@
     background-color: #073652;
 
     border: 1px solid #6a8697;
+
+    color: white;
   }
   .formContentContainer input::placeholder {
     color: white;

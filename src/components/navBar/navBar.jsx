@@ -6,6 +6,8 @@ export const NavbarComponent = ({ isNavVisible, onPageSelect }) => {
   const handlePageSelect = (id) => {
     console.log(`Page selected in NavbarComponent: ${id}`);
     onPageSelect(id);
+
+    document.body.style.overflow = "visible";
   };
 
   return (

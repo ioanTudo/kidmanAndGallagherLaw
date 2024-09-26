@@ -96,7 +96,7 @@ export const HeroImgData = [
   },
   {
     id: 2,
-    imgSrc: null,
+    imgSrc: templateBanner,
     header: "attorneys ",
     subHeader: "",
     beforeDesign: false,
@@ -104,7 +104,7 @@ export const HeroImgData = [
   },
   {
     id: 3,
-    imgSrc: null,
+    imgSrc: templateBanner,
     header: "practice areas",
     subHeader: "",
     beforeDesign: false,
@@ -112,7 +112,7 @@ export const HeroImgData = [
   },
   {
     id: 4,
-    imgSrc: null,
+    imgSrc: templateBanner,
     header: "testimonials",
     subHeader: false,
     beforeDesign: false,
@@ -120,7 +120,7 @@ export const HeroImgData = [
   },
   {
     id: 5,
-    imgSrc: null,
+    imgSrc: templateBanner,
     header: "community activity",
     subHeader: "pay nothing unless you win, let us fight for you",
     beforeDesign: false,
@@ -128,9 +128,9 @@ export const HeroImgData = [
   },
   {
     id: 6,
-    imgSrc: null,
+    imgSrc: templateBanner,
     header: "contact ",
-    subHeader: "pay nothing unless you win, let us fight for you",
+    subHeader: false,
     beforeDesign: false,
     displayBtn: false,
   },

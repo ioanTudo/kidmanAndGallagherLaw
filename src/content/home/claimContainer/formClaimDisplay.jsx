@@ -3,7 +3,7 @@ import style from "./claimsContainer.module.css";
 export const FormClaimDisplay = () => {
   return (
     <div className={style.formInputContent}>
-      <form action="">
+      <form id="formClaim" action="#">
         <div className={style.fullNameInput}>
           <input placeholder={"full name"} type="text" />
           <i className={"fa fa-user"} style={{ fontSize: "30px" }}></i>
@@ -19,7 +19,7 @@ export const FormClaimDisplay = () => {
           <i className={"fa fa-envelope"} style={{ fontSize: "30px" }}></i>
         </div>
         <textarea placeholder={"case details"} name="" id=""></textarea>
-        <button className={style.formButton}>
+        <button type="submit" form="formClaim" className={style.formButton}>
           get free consultation
           <i
             className={"fas fa-long-arrow-alt-right"}

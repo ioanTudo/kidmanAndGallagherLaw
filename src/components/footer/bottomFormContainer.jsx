@@ -23,14 +23,16 @@ export const BottomFormContainer = ({ isAboutPage }) => {
       </div>
 
       <div className={style.formContentContainer}>
-        <form action="">
+        <form id="contactFooterForm" action="#">
           <input type="text" placeholder="full name" />
           <input type="text" placeholder="phone number" />
           <input type="text" placeholder="email address" />
           <textarea name="" id="" placeholder="describe your case"></textarea>
         </form>
         <div className={style.formButtonContainer}>
-          <button>submit</button>
+          <button form="contactFooterForm" type="submit">
+            submit
+          </button>
         </div>
       </div>
     </div>
